@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Spotify Screensaver{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #191414;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        h1, h2 {
+            color: #1DB954;
+        }
+        a {
+            color: #1DB954;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            background-color: #1DB954;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #1ED760;
+        }
+        .error {
+            color: #FF0000;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

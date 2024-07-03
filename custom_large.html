@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Custom Player - Spotify Screensaver{% endblock %}
+
+{% block extra_css %}
+<style>
+    .player {
+        background-image: url('{{ background_image }}');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .album-art {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+    }
+    .track-info {
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="player">
+        <div class="content">
+            <img src="{{ album_image }}" alt="Album Art" class="album-art">
+            <div class="track-info">
+                <h2>{{ track.name }}</h2>
+                <p>{{ track.artist }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

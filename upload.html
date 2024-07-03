@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Image - Spotify Screensaver{% endblock %}
+
+{% block content %}
+    <h1>Upload Custom Image</h1>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <input type="url" name="url" placeholder="Enter image URL" required>
+        <br><br>
+        <input type="radio" id="small" name="size" value="small" checked>
+        <label for="small">Small</label>
+        <input type="radio" id="large" name="size" value="large">
+        <label for="large">Large</label>
+        <br><br>
+        <button type="submit" class="btn">Upload</button>
+    </form>
+{% endblock %}

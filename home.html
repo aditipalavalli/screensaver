@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Spotify Screensaver{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ name }}!</h1>
+    <p>Choose an option:</p>
+    <a href="{{ url_for('upload') }}" class="btn">Upload Custom Image</a>
+    <a href="{{ url_for('signout') }}" class="btn">Sign Out</a>
+{% endblock %}
